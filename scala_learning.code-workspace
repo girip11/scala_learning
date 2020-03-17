@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "terminal.integrated.rendererType": "dom",
+    "git.autorefresh": true,
+    "markdownlint.ignore": ["**/*.md.html"],
+    "files.insertFinalNewline": true,
+    "files.associations": {
+      "*.md.html": "markdown"
+    },
+    "shellcheck.enable": true,
+    "shellcheck.useWorkspaceRootAsCwd": true,
+    "shellcheck.run": "onSave",
+    "shellformat.flag": "-i 2 -ci -sr -bn",
+    "metals.javaHome": "/home/girish/.sdkman/candidates/java/8.0.232-open",
+    "metals.sbtScript": "/home/girish/.sdkman/candidates/sbt/1.3.8/bin/sbt",
+    "metals.scalafmtConfigPath": "./.scalafmt.conf"
+  }
+}
