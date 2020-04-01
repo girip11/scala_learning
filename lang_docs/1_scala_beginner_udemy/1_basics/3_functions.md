@@ -40,3 +40,14 @@ def outerFunc(arg: String): String = {
     arg
 }
 ```
+
+## Defining empty functions
+
+* `???` - helps define a function body later.
+* It's a method that raises `scala.NotImplementedError` when the function is called.
+
+```Scala
+def sayHello(name: String): String = ???
+
+sayHello("John")
+```
