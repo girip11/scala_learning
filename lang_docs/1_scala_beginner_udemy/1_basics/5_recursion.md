@@ -33,7 +33,7 @@ def factorial(n: Int): BigInt = {
 
 * In functional programming, use recursive function(particularly **tail recursion**) when you need a loop.
 
-* Use as many accumulators as needed in a function to make it tail recursive.
+* Use as **many accumulators as needed** in a function to make it tail recursive.
 
 * In nested functions that are tail recursive we can refer to the parameters and variables from the outer/enclosing function.
 
@@ -68,7 +68,6 @@ def isPrime(n: Int): Boolean = {
 
 // Version2 with accumulator
 def isPrime(n: Int): Boolean = {
-    // This is without using an accumulator
     @tailrec
     def isPrimeHelper(div: Int, isStillPrime: Boolean): Boolean = {
         if (!isStillPrime) false
@@ -81,7 +80,6 @@ def isPrime(n: Int): Boolean = {
 ```
 
 * Using multiple accumulators in the tail recursive function.
-* Number of accumulators = Number of recursive calls
 
 ```Scala
 import scala.annotations.tailrec
@@ -98,3 +96,15 @@ def fibonacci(n: Int): Int = {
     fibHelper(2, 1, 1)
 }
 ```
+
+## Steps to write a recursive function
+
+1. Come up with the function signature
+2. What is the recursion end condition? What should the end condition return?
+3. Main logic of the function
+
+> Always have an end condition, and write it as soon as possible.
+
+## References
+
+* [Recursion: Thinking Recursively](https://alvinalexander.com/scala/fp-book/recursion-thinking-recursively-function-signatures/)

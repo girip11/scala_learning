@@ -10,6 +10,7 @@
 // name and age are class parameters
 // Parameters passed to this class is referred to as primary constructor
 class Person(name: String, age: Int) {
+// above syntax is same as `class Person(private val name: String, private val age: Int)`
     // This block can contain anything that a normal block can contain
     // Expressions inside this block are evaluated everytime a new instance
     // of this class in instantiated.

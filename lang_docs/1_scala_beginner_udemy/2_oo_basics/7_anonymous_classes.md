@@ -1,6 +1,10 @@
 # Anonymous classes
 
-* Work for both abstract and non abstract classes
+* Work for both abstract and non abstract classes as well as traits.
+
+* In case of non abstract classes, we need to pass in the arguments to the constructor.
+
+* Anonymous class should implement all the abstract methods and properties when deriving either from an abstract class or a trait.
 
 ```Scala
 abstract class Animal {
@@ -19,10 +23,8 @@ class Person(val name: String, age: Int) {
     def eats: Unit =  println("Eating")
 }
 
-// Arguments should be passes to the Person
+// Arguments should be passed to the Person
 val john = new Person("John", 25) {
     override def eats: Unit = println("Eating pizza")
 }
 ```
-
-* Works for traits as well. In this case, all the abstract fields and methods in the trait should be implemented by the anonymous class.

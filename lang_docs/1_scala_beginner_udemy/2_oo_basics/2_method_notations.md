@@ -91,4 +91,4 @@ println(jane.apply())
 println(jane())
 ```
 
-* If we implement the `apply()` method on class, then we can create use this method as the factory method to create its instances.
+* If we implement the `apply()` method on class(Class's companion object), then we can create use this method as the factory method to create its instances.

@@ -22,6 +22,25 @@ def factorial(n: Int, acc: Int = getDefaultValueForAcc): Int = {
 factorial(5)
 ```
 
+* If the function returns a mutable data structure as the value for the default argument, unlike python each function call will get the default value after calling the function. In python, the default value returned by the function is called and never called again
+
+```Scala
+def getDefaultValueForAcc(): ArrayBuffer[String] = {
+  println(" I am called" )
+  ArrayBuffer[String] ()
+}
+
+def testFunction(value: ArrayBuffer[String] = getDefaultValueForAcc): Unit = {
+  value += "John"
+  println(value)
+}
+
+// new array buffer will be returned as the default parameter value
+// everytime the function is called.
+testFunction()
+testFunction()
+```
+
 * Default arguments can be placed anywhere in the parameter list.
 * But if the default parameters occur before positional parameters, then to invoke the function we make use of **named arguments** to skip passing values to default parameters
 

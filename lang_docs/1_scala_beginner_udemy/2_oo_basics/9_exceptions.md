@@ -48,7 +48,7 @@ throw new MyException
 
 ```Scala
 // Raises OutOfMemoryError(OOM)
-val myarray = Array.ofDim(Int.MaxValue
+val myarray = Array.ofDim(Int.MaxValue)
 ```
 
 ## Raise StackoverflowError

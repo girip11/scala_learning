@@ -4,7 +4,7 @@
 
 * `extends` keyword for inheriting from a base class.
 
-* `private`, `protected` access modifiers. Cannot be called from outside the object.
+* `private`, `protected` access modifiers. No modifier means public. Cannot be called from outside the object.
 
 * `private` methods and attributes of a class cannot be accessed directly from inside the methods of the subclasses.
 
@@ -47,9 +47,9 @@ class Employee(val name: String, val age: Int, val id: String) extends Person(na
 
 * `override` keyword before the method/attribute that is being overridden.
 
-* Attributes/fields can be overriden in the constructor itself.
+* Attributes/fields can be overridden in the constructor itself.
 
-* Overridden methods and fields are called on the actual underlying type of object though the reference may be of its parent type.
+* Overridden methods and fields are called on the actual underlying type of object though the reference may be of its parent type(polymorphism).
 
 ```Scala
 class Animal {
@@ -95,7 +95,7 @@ class Child extends Parent {
 
 ## Preventing overrides
 
-* `final` - prevents overriding a method or field.
+* `final` on a method or a field - prevents overriding that method or field.
 * When `final` is used on a class, prevents the class from being subclassed.
 
-* `sealed` - inheritance allowed in the same file but not by types defined on different file.
+* `sealed` - inheritance allowed in the same file (inheritance restricted to that file only) but not by types defined on different file.

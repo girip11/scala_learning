@@ -50,4 +50,4 @@ while(i < 10) {
 ## Code blocks
 
 * Variables defined in a block are visible only within the block.
-* Block is also an expression and the value of the block is the **value of the last expression in that block**.
+* Block is also an expression and the value of the block is the **value of the last statement in that block**.

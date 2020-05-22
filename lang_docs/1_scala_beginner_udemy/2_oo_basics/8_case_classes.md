@@ -5,10 +5,9 @@
 * **Class parameters become class fields** in case classes
 * Sensible default `toString` representation.
 * `equals` and `hashcode` implementation **out of the box**. These methods are useful when the instances are used with collections like Set and Map.
-* case classes have `copy` method. Creates a new instance from an existing instance.
-* Compiler automatically create companion objects for the case classes.
-* Default `apply` method to the companion object. So need not use `new` to instantiate case classes.
-* Case classes are by **default serializable**.
+* case classes have `copy` method. Creates a new instance from an existing instance. Also we can customize the class fields during copy.
+* Compiler automatically create companion objects for the case classes. These companion objects by default have an `apply` method, so we need not use the `new` keyword to instantiate case classes.
+* Case classes are by **default serializable**. This is veryful in distributed computing.
 * Case classes have **extractor patterns**. Very helpful in pattern matching.
 
 ```Scala

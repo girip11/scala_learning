@@ -11,13 +11,12 @@ abstract class Animal {
     val CreatureType: String
     def eat: Unit
 }
-
-
 ```
 
 ## Traits
 
 * By default fields and methods in a trait are public and abstract
+* But traits can contain non abstract implementations as well. Helps in mixins.
 * Mixin as many traits as we want
 
 ```Scala
@@ -50,8 +49,8 @@ class Crocodile extends Animal with Carnivore {
 
 ## Type hierarchy
 
-* scala.Any - Root
-* scala.AnyRef - Base of all classes
-* scala.Null - inherits from everything.
-* scala.AnyVal - inherits from `Any`. Base class of primitive types
-* scala.Nothing - subtype of every type in scala. Represents nothingness
+* `scala.Any` - Root
+* `scala.AnyRef` - Base of all classes
+* `scala.Null` - inherits from everything that is an AnyRef.
+* `scala.AnyVal` - inherits from `Any`. Base class of primitive types
+* `scala.Nothing` - subtype of every type in scala(including `scala.Null`).Represents nothingness
