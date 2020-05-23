@@ -40,3 +40,9 @@ val str: String = "Hello"
 val isEmpty: Boolean = true
 
 ```
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

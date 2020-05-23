@@ -104,7 +104,9 @@ def fibonacci(n: Int): Int = {
 3. Main logic of the function
 
 > Always have an end condition, and write it as soon as possible.
+---
 
 ## References
 
 * [Recursion: Thinking Recursively](https://alvinalexander.com/scala/fp-book/recursion-thinking-recursively-function-signatures/)
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

@@ -92,3 +92,9 @@ println(jane())
 ```
 
 * If we implement the `apply()` method on class(Class's companion object), then we can create use this method as the factory method to create its instances.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

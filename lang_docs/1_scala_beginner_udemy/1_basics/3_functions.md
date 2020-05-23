@@ -51,3 +51,9 @@ def sayHello(name: String): String = ???
 
 sayHello("John")
 ```
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

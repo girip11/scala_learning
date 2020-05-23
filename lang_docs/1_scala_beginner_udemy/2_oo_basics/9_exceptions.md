@@ -59,3 +59,9 @@ def createSO: Int = 1 + createSO
 
 createSO
 ```
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

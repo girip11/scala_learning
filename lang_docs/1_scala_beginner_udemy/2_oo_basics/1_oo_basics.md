@@ -1,7 +1,5 @@
 # Object Oriented basics
 
-* Below notes are part of the [Scala lectures on Udemy](https://www.udemy.com/share/1013xsCUMfd1lVR34=/).
-
 ## Class and constructor
 
 * Class parameters are accessible within the class only.
@@ -78,3 +76,9 @@ class Person(val name: String, val age: Int) {
 }
 
 ```
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

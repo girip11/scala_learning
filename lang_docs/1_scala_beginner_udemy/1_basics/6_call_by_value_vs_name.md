@@ -36,3 +36,10 @@ callByName(Random.nextInt(10))
 ```
 
 * **Delays the evaluation of the expression** till its first use.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)
+* [Call by name tricks](https://rockthejvm.com/blog/207478/3-tricks-cbn)

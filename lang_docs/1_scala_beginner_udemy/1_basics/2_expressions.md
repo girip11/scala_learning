@@ -51,3 +51,9 @@ while(i < 10) {
 
 * Variables defined in a block are visible only within the block.
 * Block is also an expression and the value of the block is the **value of the last statement in that block**.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

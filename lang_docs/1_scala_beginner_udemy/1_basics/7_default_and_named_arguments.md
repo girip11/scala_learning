@@ -71,3 +71,9 @@ getUrl(port= 8080, protocol = "http", host = "wikipedia.com")
 ```
 
 Hence it is a good practice to place the default arguments at the last following the required arguments
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

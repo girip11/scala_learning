@@ -87,3 +87,9 @@ class MyList[+A] {
 ```
 
 More on generics and type system is covered in the advanced course.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

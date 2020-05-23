@@ -99,3 +99,9 @@ class Child extends Parent {
 * When `final` is used on a class, prevents the class from being subclassed.
 
 * `sealed` - inheritance allowed in the same file (inheritance restricted to that file only) but not by types defined on different file.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

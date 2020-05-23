@@ -40,3 +40,9 @@ println(Person("Jacob", 30) == Person("Jacob", 30))
 ## Case Objects
 
 * Very similar to case classes except that **they are themselves the companion objects**.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

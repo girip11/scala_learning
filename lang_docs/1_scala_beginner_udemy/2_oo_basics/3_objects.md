@@ -69,3 +69,9 @@ object MyApp extends App {
 * Scala companions (object and the class) can access **each other's private members**.
 
 * We can also define companion objects for traits.
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

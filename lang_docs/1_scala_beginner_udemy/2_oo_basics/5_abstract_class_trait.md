@@ -54,3 +54,9 @@ class Crocodile extends Animal with Carnivore {
 * `scala.Null` - inherits from everything that is an AnyRef.
 * `scala.AnyVal` - inherits from `Any`. Base class of primitive types
 * `scala.Nothing` - subtype of every type in scala(including `scala.Null`).Represents nothingness
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

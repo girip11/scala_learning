@@ -65,3 +65,9 @@ val msg: String = "This is a \n newline character"
 // This will be escaped
 println(raw"$msg")
 ```
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)

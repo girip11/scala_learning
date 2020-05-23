@@ -36,3 +36,9 @@ import learning.{SimpleClass => SimpleImp}
 ```
 
 * default imports. `java.lang`, `scala` (top level scala package), `scala.predef` (consists of `println`, `???`)
+
+---
+
+## References
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)
