@@ -1,0 +1,6 @@
+project/project/
+target/
+.metals/
+.bloop/
+.vagrant/
+.idea/

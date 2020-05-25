@@ -1,5 +1,7 @@
 # Learning Scala programming language
 
+* [Scala Levels](https://www.scala-lang.org/old/node/8610)
+
 ## Learning from books
 
 * Programming in Scala by Martin Odersky, Lex Spoon, and Bill Venners
