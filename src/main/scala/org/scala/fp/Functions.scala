@@ -18,6 +18,14 @@ object Functions extends App {
   }
 
   val tripler = process(3)
-//  triples the passed value
+  //  triples the passed value
   println(tripler(9))
+
+
+  def simpleFunc(value: Int): (Int => Int) = new (Int => Int) {
+    override def apply(v1: Int): Int = v1 + value
+  }
+
+  val add10 = simpleFunc(10)
+  println(add10(5))
 }

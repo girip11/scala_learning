@@ -26,7 +26,7 @@ println(doublerAnon(2))
 
 * Multiple parameter types should be placed within paranthesis `(Int, Int) => Int`
 
-* Lambdas should always be invoked using paranthesis.
+* Lambdas should always be **invoked using paranthesis**.
 
 ```Scala
 val something: () => Int = () => 3

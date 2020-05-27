@@ -26,20 +26,33 @@ println(nTimesBetter((x: Int) => x + 1, 10)(1))
 * Using higher order functions we can create curried functions. Currying deals with functions with multiple parameter lists.
 
 ```Scala
+// => is right associative
 val adder: (Int => (Int => Int)) = (inc: Int) => (value: Int) => value + inc
 println(adder(3)(10))
 ```
 
-* Functions with multiple parameter lists can be created in another way.
+* Functions with multiple parameter lists can be created in another way.(Another form of curried functions)
 
 ```Scala
 def curriedFormatter(template: String)(value: Double): String = template.format(value)
 
 // providing a type for standardFormatter is mandatory
+// Without explicitly defining type, the compiler will think of
+// RHS expression as a function call but with less parameters.
+// By entering the type compiler understands that the return type is
+// a function that can accept rest of the parameter lists
 val standardFormatter: (Double => String) = curriedFormatter("%4.2f")
+
+// This syntax also works but less readable
+// By providing _ for the other parameter list, compiler implicitly
+// understands the LHS type is a function type.
+val standardFormatter2 = curriedFormatter("%4.2f")(_)
+
 val preciseFormatter: (Double => String) = curriedFormatter("%10.8f")
 
 println(standardFormatter(Math.PI))
+println(standardFormatter2(Math.PI))
+
 println(preciseFormatter(Math.PI))
 ```
 
