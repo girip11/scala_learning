@@ -45,6 +45,9 @@ println(newPhonebook)
 
 // Functional on maps
 // map, flatMap and filter exists on Map but less commonly used
+// if two entries "Jim" -> 555 and "JIM" -> 787 are present in the map
+// after the mapping these two entries will have the same keys. So, the first
+// entry "jim" -> 555 will be updated with the value "jim" -> 787
 println(phonebook.map(pairing => pairing._1.toLowercase -> pairing._2)
 
 println(newPhonebook.filterKeys(key => key.startsWith("J"))

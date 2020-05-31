@@ -1,5 +1,7 @@
 package org.scala.fp.hof
 
+import scala.util.Random
+
 abstract class MyList[+A] {
   val head: A
   val tail: MyList[A]
@@ -78,16 +80,18 @@ case class MyConcreteList[+A](override val head: A, override val tail: MyList[A]
     this.tail.fold(transformer(start, this.head))(transformer)
   }
 
+//  Sort is not tail recursive
   override def sort(compare: (A, A) => Int): MyList[A] =  {
 
     @scala.annotation.tailrec
     def insert(x: A, sortedList: MyList[A], acc: MyList[A]): MyList[A] = {
       if (sortedList.isEmpty) acc ++ MyConcreteList(x, EmptyList)
-      else if(compare(x, sortedList.head) <= 0) new MyConcreteList(x, sortedList)
-      else insert(x, sortedList.tail, acc ++ new MyConcreteList(sortedList.head, EmptyList))
+      else if(compare(x, sortedList.head) <= 0) acc ++ MyConcreteList(x, sortedList)
+      else insert(x, sortedList.tail, acc ++ MyConcreteList(sortedList.head, EmptyList))
     }
 
     val sortedList = this.tail.sort(compare)
+//    println(s"$head, $sortedList")
     insert(this.head, sortedList, EmptyList)
   }
 
@@ -122,8 +126,24 @@ object MyListDriver extends App {
 
   println(mylist.fold(100)(_ + _))
 
-  val unsortedList = new MyConcreteList[Int](4, EmptyList).add(3).add(2).add(1)
-  println(unsortedList.sort((x,y) => y-x))
+  val unsortedList = new MyConcreteList[Int](4, EmptyList).add(20).add(100).add(10).add(50)
+  println(unsortedList)
+  println(unsortedList.sort((x,y) => x-y))
+  //  val unsortedList = new MyConcreteList[Int](1, EmptyList).add(2).add(3).add(4).add(5)
+
+//  This will raise stackoverflow exception since the sort function is not tail recursive
+//  var unsortedList: MyList[Int] = new MyConcreteList[Int](1, EmptyList)
+//  val r = new Random((System.nanoTime()))
+//  for {
+//   n <- 1 to 100000
+//  } unsortedList = unsortedList.add(r.nextInt(Int.MaxValue))
+//  val sortedList = unsortedList.sort((x,y) => x-y)
+//  sortedList.fold(0)( (x, y) => {
+//    if (x <= y) y
+//    else throw new RuntimeException("Problem detected")
+//  })
+
+
 
   //    This is rewritten using the map operation
   println(for {
