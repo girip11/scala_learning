@@ -5,6 +5,10 @@
 * Exception - something wrong with the program ex: `NullPointerException`
 * Error - Outside the program like `StackOverflowError`
 
+* No checked exceptions (exceptions checked at compile time) in scala. We don't need to declare that a function or method will throw a certain exception.
+
+* `throw` expression returns `Nothing`
+
 ## Raising/throwing exceptions
 
 * `throw new Exception` - this expression returns `Nothing`

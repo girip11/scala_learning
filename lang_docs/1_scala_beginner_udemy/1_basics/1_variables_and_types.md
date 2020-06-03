@@ -41,6 +41,16 @@ val isEmpty: Boolean = true
 
 ```
 
+## Lazy initialization
+
+* When a variable declaration is preceded with keyword `lazy`, the expression is evaluated only when the variable is accessed for the first time.
+
+```Scala
+lazy val words = scala.io.Source.fromFile("/usr/share/dict/words").mkString
+```
+
+* Everytime a lazy variable is accessed, a thread safe check is done on whether the variable is already initialized.
+
 ---
 
 ## References
