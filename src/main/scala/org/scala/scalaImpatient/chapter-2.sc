@@ -54,11 +54,11 @@ countdown(5)
 // 6. product of unicode codes of all letters in a string
 var product: Long = 1
 val inputString = "Hello"
-for {
+val prod = (for {
   ch <- inputString
-} product *= ch.toLong
+} yield ch.toLong).product
 
-println(product)
+println(prod)
 
 // 7. above without loop and using a method from StringOps
 "Hello".foldLeft(1L)((prod: Long, ch: Char) => prod * ch.toLong)
@@ -66,7 +66,7 @@ println(product)
 // 8 and 9 Function to compute product of characters in a String
 def computeProduct(input: String): Long = {
   if (input == "") 1
-  else input(0).toLong * computeProduct(input.substring(1))
+  else input.head.toLong * computeProduct(input.tail)
 }
 computeProduct("Hello")
 
