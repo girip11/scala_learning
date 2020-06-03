@@ -72,6 +72,29 @@ getUrl(port= 8080, protocol = "http", host = "wikipedia.com")
 
 Hence it is a good practice to place the default arguments at the last following the required arguments
 
+## Variable arguments
+
+```Scala
+// numbers is of type Seq
+def sum(numbers: Int*): Int = {
+    var s = 0
+    for (num <- numbers) s += num
+    s
+}
+```
+
+* To unpack an iterable to argument list use the `: _*` syntax
+
+```Scala
+// numbers is of type Seq
+def recursiveSum(numbers: Int*): Int = {
+    if (numbers.length == 0) 0
+    else numbers.head + recursiveSum(numbers.tail: _*)
+}
+
+recursiveSum(1 to 10: _*)
+```
+
 ---
 
 ## References

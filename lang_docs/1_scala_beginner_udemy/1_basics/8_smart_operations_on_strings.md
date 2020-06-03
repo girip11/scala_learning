@@ -39,6 +39,11 @@ val name: String = "John Doe"
 val age: Int = 30
 
 println(s"My name is $name and I am $age years old")
+
+// To include $ itself as a content in the string
+// add another $ as a prefix
+val price = 145
+println(s"Value of iphone 12 is $$$price")
 ```
 
 * Expressions are enclosed within `${}`

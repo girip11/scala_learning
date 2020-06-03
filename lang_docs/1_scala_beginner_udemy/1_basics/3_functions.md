@@ -52,6 +52,19 @@ def sayHello(name: String): String = ???
 sayHello("John")
 ```
 
+## Procedures
+
+* `Unit` is the return type.
+* Function body follows the function name and the parameter list. `=` is skipped
+
+```Scala
+def simpleProcedure(name: String)  {
+    println(s"Hello, $name")
+}
+```
+
+* Explicit mention of `Unit` as the return type is recommended for readability purposes.
+
 ---
 
 ## References
