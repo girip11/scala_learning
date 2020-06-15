@@ -175,4 +175,77 @@ object Chapter8 extends App {
   // Book contains a very good example of issues with constructor initialization
   // order and early definitions where we can make a code in subclass execute prior
   // to the superclass constructor body
+
+
+  //===============================================================================
+  // Scala inheritance hierarchy
+  // All value types extend AnyVal
+  // All references types extend AnyRef which is converted to java.lang.object when compiling
+  // Any is the root of AnyVal and AnyRef
+  // Null is a subtype of all the AnyRef types
+  // Nothing is a subtype of all the types including Null
+
+  def anyToTuple(arg: Any): Unit = {
+    arg match {
+      case tuple: (_) => println("tuple") // scalastyle:ignore
+      case _ => println("notuple") // scalastyle:ignore
+    }
+    println(arg) // scalastyle:ignore
+  }
+
+  //  multiple parameter gets converted to Tuple
+  anyToTuple(1,2,3,4,5)
+
+  //===============================================================================
+  // Object equality
+  // AnyRef's eq method checks if both references point to same object
+  // equals by default calls eq
+  // In custom classes, we have to implement our own equals to compare based on
+  // custom data in those classes.
+  // equals and hashCode are often defined together
+  // == calls equals method and we should use this method only
+  class Item(val description: String, val price: Double) {
+    // equals made final so that a.equals(b) and b.equals(a) will be same
+    // (i.e) commutative even when b is a subclass
+    // To override the parameter type should be Any
+    final override def equals(other: Any): Boolean = {
+      other match {
+        case that: Item =>
+          description == that.description && price == that.price
+        case _ => false
+      }
+    }
+
+    // The ## method is a null-safe version of the hashCode method
+    // that yields 0 for null instead of throwing an exception.
+    final override def hashCode: Int = (description, price).##
+  }
+
+  //===============================================================================
+  // Value types in scala
+  // extend AnyVal
+  // Primary constructor should accept only one field
+  // methods can be defined on the value class
+  // No other fields and constructors allowed for value class
+  // equals and hashCode are automatically provided
+
+  // constructor parameter has to be a val only
+  // var is not allowed
+  // Using companion object and apply method
+  // we can provide a factory for creating instances of Value classes
+  class Author private(val author: String) extends AnyVal {
+    override def toString: String = s"$author"
+  }
+
+  object Author {
+    def apply(author: String): Author = {
+      // we can do some validations as well
+      new Author(author)
+    }
+  }
+
+  val author = Author("John")
+  println(author) // scalastyle:ignore
+
+
 }

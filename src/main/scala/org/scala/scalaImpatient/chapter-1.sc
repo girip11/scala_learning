@@ -1,6 +1,7 @@
 // Solutions can also be checked in the repository
 // https://github.com/marcus-nl/scala-impatient-2nd-ed
 // https://github.com/saljuama/scala-for-the-impatient
+// https://github.com/derlin/scala-for-the-impatient
 
 // 6.
 scala.math.BigInt(2).pow(1024)
