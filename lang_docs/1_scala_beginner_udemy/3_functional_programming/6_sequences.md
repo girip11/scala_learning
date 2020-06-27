@@ -66,7 +66,7 @@ println(apples5.mkString("-"))
 ## `Array`
 
 * Equivalent of Java array
-* Can be constructed with predefined lengths
+* Can be constructed with predefined lengths. Once constructed we cannot increase the size of that array.
 * mutable. Elements can be updated in place. When converted to scala object, the equivalent one is `scala.collection.mutable.WrappedArray`
 * interoperable with java arrays
 * indexing is fast

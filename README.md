@@ -4,6 +4,7 @@
 
 ## Learning from books
 
+* Scala for the impatient - Very highly recommended
 * Programming in Scala by Martin Odersky, Lex Spoon, and Bill Venners
 
 ## Learning from online tutorials
@@ -17,8 +18,11 @@ Youtube courses from Mark Lewis
 [EPFL Courses](https://courseware.epfl.ch/) (Some are from **Martin Odersky** the author of Scala programming language)
 
 * [Functional Programming Principles in Scala](https://courseware.epfl.ch/courses/course-v1:EPFL+progfun1+2018_T1/about)
+
 * [Functional Program Design in Scala](https://courseware.epfl.ch/courses/course-v1:EPFL+progfun2+2018_T1/about)
+
 * [Parallel programming](https://courseware.epfl.ch/courses/course-v1:EPFL+parprog1+2018_T1/about)
+
 * [Big Data Analysis with Scala and Spark](https://courseware.epfl.ch/courses/course-v1:EPFL+scala-spark-big-data+2018-T1/about)
 
 [All About Scala](http://allaboutscala.com/#scala-introduction) can be considered as an online book.
