@@ -26,7 +26,6 @@ val isEven = if(num % 2 == 0) true else false
 ```scala
 
 var testVar = 0
-// This assigns Unit to assignValue
 var a, b: Any = null
 
 // This will assign Unit to a and 100 to b
@@ -34,7 +33,6 @@ a = b = 100
 
 // This assigns 100 to both the variables.
 val assignValue, testVar = 100
-// assignValue is of type Unit
 println(assignValue)
 
 // We can also assign Unit to a variable by assigning ()
