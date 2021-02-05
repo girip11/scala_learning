@@ -45,6 +45,10 @@ object chapter13Tryouts extends App {
   // computed elements again
   // Iterators can be converted to stream using the `toStream` method
 
+  // Stream is similar to List except that it is lazy
+  //  #:: can be used to create a stream, just like :: for List
+  def getInfiniteSequence(start: Int): Stream[Int] = start #:: getInfiniteSequence(start + 1)
+
   val itr = scala.io.Source.fromString("Hello world")
 
   val stream:Stream[Char] = itr.toStream
@@ -93,6 +97,38 @@ object chapter13Tryouts extends App {
   // transformations are evaluated lazily.
   println(lazySquares.take(5).foreach(println))
   println(lazySquares.take(5).count(_ % 2 == 0)) // another action
+
+  //================================================================================
+  // SUMMARY Iterators vs  Streams vs Views
+  // References:
+  // * https://docs.scala-lang.org/tutorials/FAQ/stream-view-iterator.html
+  // * https://alvinalexander.com/scala/how-to-create-lazy-views-collections-scala-cookbook/
+  // Stream is a lazy list indeed. In fact, in Scala, a Stream is a List
+  // whose tail is a lazy val. Once computed, a value stays computed and is reused.
+  // Or, as you say, the values are cached.
+  //
+  // An Iterator can only be used once because it is a traversal pointer into a
+  // collection, and not a collection in itself. What makes it special in Scala
+  // is the fact that you can apply transformation such as map and filter and
+  // simply get a new Iterator which will only apply these transformations
+  // when you ask for the next element.
+  //
+  // Views are meant to be viewed much like a database view. It is a series of
+  // transformation which one applies to a collection to produce a “virtual”
+  // collection. As you said, all transformations are re-applied each time you
+  // need to fetch elements from it.
+
+  // The benefit of using a view in regards to performance comes with how the view
+  // works with transformer methods.
+  // Both Iterator and views have excellent memory characteristics.
+  // Stream is nice, but, in Scala, its main benefit is writing infinite sequences
+  // (particularly sequences recursively defined). One can avoid keeping all of
+  // the Stream in memory, though, by making sure you don’t keep a reference
+  // to its head (for example, by using def instead of val to define the Stream).
+  //
+  // Because of the penalties incurred by views, one should usually force
+  // it after applying the transformations, or keep it as a view if only few elements
+  // are expected to ever be fetched, compared to the total size of the view.
 
   //==================================================================================
   // Java and scala collections interoperability

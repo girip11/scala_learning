@@ -1,0 +1,15 @@
+[tool.poetry]
+authors = ["girish pasupathy <girishpasupathy@gmail.com>"]
+description = "Notebooks on various problems using machine learning."
+license = "MIT"
+name = "Scala on jupyter"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+jupyter = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
