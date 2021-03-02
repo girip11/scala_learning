@@ -9,6 +9,8 @@ version = "0.1.0"
 jupyter = "^1.0.0"
 jupyter-http-over-ws = "^0.0.8"
 jupyterthemes = "^0.20.0"
+# poetry add gitrepo --git ssh://git@github.com/myorganization/myprivaterepo.git
+toree = {git = "https://github.com/apache/incubator-toree.git", branch = "master"}
 
 [tool.poetry.dev-dependencies]
 
