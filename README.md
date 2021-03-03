@@ -9,6 +9,11 @@
 
 ## Learning from online tutorials
 
+Udemy course from Daniel are excellent
+
+* [Scala & Functional Programming for Beginners | Rock the JVM](https://www.udemy.com/share/1013xsCUMfd1lVR34=/)
+* [Advanced Scala](https://www.udemy.com/share/101ZxACUMfd1lVR34=/)
+
 Youtube courses from Mark Lewis
 
 * [Introduction to Programming and Problem Solving Using Scala](https://www.youtube.com/playlist?list=PLLMXbkbDbVt9MIJ9DV4ps-_trOzWtphYO)
@@ -25,18 +30,23 @@ Youtube courses from Mark Lewis
 
 * [Big Data Analysis with Scala and Spark](https://courseware.epfl.ch/courses/course-v1:EPFL+scala-spark-big-data+2018-T1/about)
 
-[All About Scala](http://allaboutscala.com/#scala-introduction) can be considered as an online book.
+Other useful resources are
+
+* [All About Scala](http://allaboutscala.com/#scala-introduction) can be considered as an online book.
+
 > Here at allaboutscala.com, we provide a complete beginner's tutorial to help you learn Scala in small, simple and easy steps.
 
-[ScalaSchool](http://twitter.github.io/scala_school/) aims at preparing experienced engineers to be productive Scala programmers.
+* [ScalaSchool](http://twitter.github.io/scala_school/) aims at preparing experienced engineers to be productive Scala programmers.
 
-[Scala community](https://www.scala-lang.org/community/).
+* [Scala community](https://www.scala-lang.org/community/).
 
 ## Practising Scala Programming
 
-* Use Scala REPL locally.
+* Use Scala REPL or Ammonite locally
+* Use Almond or apache toree kernel with jupyter notebook
 * [ScalaFiddle](https://scalafiddle.io/) for practising online.
 * [Scala exercises](https://www.scala-exercises.org/) contains exercises to tryout on various topics.
+* [Exercism](https://exercism.io) to solve programming challenges in scala
 
 ## References
 
