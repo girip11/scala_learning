@@ -98,6 +98,10 @@ goals in each phase refer the book.
 
 - `mvn dependency:copy-dependencies` copies all the dependent libraries to a target folder.
 
+- `mvn dependency:analyze` - help use removing unused dependencies.
+
+- In [IntelliJ idea use **Maven Helper** plugin](https://stackoverflow.com/a/41546730/2369053).
+
 ---
 
 ## References
