@@ -153,4 +153,6 @@ object TasmanianDevil extends Carnivore {
 
 ## References
 
+- [Scaladoc](https://docs.scala-lang.org/style/scaladoc.html)
 - [Guide to Scaladoc](https://www.baeldung.com/scala/scaladoc)
+- [How to generate Scala documentation with the `scaladoc` command](https://alvinalexander.com/scala/how-to-generate-scala-documentation-scaladoc-command-examples/)
