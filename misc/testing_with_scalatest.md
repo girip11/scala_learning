@@ -10,3 +10,5 @@
 
 - [Introduction to Testing With ScalaTest](https://www.baeldung.com/scala/scalatest)
 - [Scalatest 3.0.9 documentation](https://www.scalatest.org/scaladoc/3.0.9/org/scalatest/FunSpec.html)
+- [Scalatest - Examples](https://queirozf.com/entries/scala-testing-with-scalatest-reference-and-examples)
+- [12 Scalatest tutorials](https://alvinalexander.com/scala/scalatest-tutorials-from-scala-cookbook/)
