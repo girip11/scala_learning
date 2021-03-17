@@ -15,6 +15,5 @@ scalaVersion := "2.12.10"
 resolvers += Classpaths.typesafeReleases
 
 libraryDependencies ++= Seq(
-  "org.scalacheck" % "scalacheck_2.12" % "1.14.2",
   scalaTest % Test
 )
