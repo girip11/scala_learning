@@ -68,11 +68,13 @@ object LazyEvalExercise extends App {
 
     override def isEmpty: Boolean = false
 
-    override def tail: MyStream[A] = tailExp
+    // lazy val is preferred because we want the tailExp to be evaluated exactly once
+    // in this instance.
+    override lazy val tail: MyStream[A] = tailExp
 
     override def #::[B >: A](element: B): MyStream[B] = new MyConcreteStream[B](element, this)
 
-    override def ++[B >: A](anotherStream: MyStream[B]): MyStream[B] = head #:: (tail ++ anotherStream)
+    override def ++[B >: A](anotherStream: MyStream[B]): MyStream[B] = new MyConcreteStream(head, tail ++ anotherStream)
 
     override def foreach(f: A => Unit): Unit = {
       f(head)
@@ -99,7 +101,7 @@ object LazyEvalExercise extends App {
         if (n == 0)
           new MyEmptyStream[A]
         else
-          head #:: tail.take(n-1)
+          new MyConcreteStream(head, tail.take(n-1))
     }
 
     override def takeAsList(n: Int): List[A] = {
@@ -115,25 +117,45 @@ object LazyEvalExercise extends App {
     }
   }
 
-  val st = MyStream.from(5)(_ + 1)
-  println(st)
-  println(st.head)
-  println(st.tail)
-  println(st.tail.head)
-  println(st.takeAsList(10))
+//  val st = MyStream.from(5)(_ + 1)
+//  println(st)
+//  println(st.head)
+//  println(st.tail)
+//  println(st.tail.head)
+//  println(st.takeAsList(10))
+//
+//  println(1 #:: st)
+//  println((1 #:: st).takeAsList(3))
+//
+//  println(((1 #:: new MyEmptyStream[Int]) ++ st).takeAsList(10))
+//
+//  st.take(5).foreach(println)
+//
+//  st.take(5).map(_ * 10).foreach(println)
+//
+//  st.map(_ * 10).take(5).foreach(println)
+//
+//  st.flatMap(i => (i * 10) #:: new MyEmptyStream[Int]).take(5).foreach(println)
+//
+//  st.filter(_ % 2 == 0).take(5).foreach(println)
 
-  println(1 #:: st)
-  println((1 #:: st).takeAsList(3))
+  def getFibonacciStream(f: Int, s: Int): MyStream[Int] = {
+    new MyConcreteStream[Int](f, getFibonacciStream(s, f + s))
+  }
+  val fibSt = getFibonacciStream(1, 1)
+  fibSt.take(10).foreach(println)
 
-  println(((1 #:: new MyEmptyStream[Int]) ++ st).takeAsList(10))
+  println("================================================================================")
+  //Stream of prime numbers with Eratosthenes Sieve
+  def getPrimeNumbersStream: MyStream[Int] = {
+    def getPrimeInner(prime: Int, stream: MyStream[Int]): MyStream[Int] = {
+      val nextStream = stream.filter(n => n != prime && n % prime != 0)
+      val nextPrime = nextStream.take(1).head
+      new MyConcreteStream[Int](prime, getPrimeInner(nextPrime, nextStream))
+    }
+    getPrimeInner(2, MyStream.from(2)(_ + 1))
+  }
 
-  st.take(5).foreach(println)
-
-  st.take(5).map(_ * 10).foreach(println)
-
-  st.map(_ * 10).take(5).foreach(println)
-
-  st.flatMap(i => (i * 10) #:: new MyEmptyStream[Int]).take(5).foreach(println)
-
-  st.filter(_ % 2 == 0).take(5).foreach(println)
+  val primeStream = getPrimeNumbersStream
+  primeStream.take(10).foreach(println)
 }
