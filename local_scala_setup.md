@@ -54,6 +54,7 @@ Following are excellent articles on SBT
 
 - [zio](https://github.com/zio)
 - cats
+- scalaz
 
 ---
 
